@@ -16,6 +16,13 @@ class Rally(models.Model):
     start_date = models.DateField('first night')
     end_date = models.DateField('last night')
     leave_time = models.TimeField('time to leave site', default='16:00')
+    steward_name
+    steward_email
+    steward_phone
+    steward2_name
+    steward2_email
+    steward2_phone
+    Description
 
     site_name = models.CharField(max_length=STRMAX, default='')
 

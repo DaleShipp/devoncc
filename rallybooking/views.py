@@ -7,14 +7,14 @@ from django.views import generic
 
 from rallybooking.models import Rally
 
-
-def index(request):
-    rally_list = Rally.objects.order_by('-start_date')[:5]
-    template = loader.get_template('rallybooking/index.html')
-    context = {
-        'rally_list': rally_list,
-    }
-    return HttpResponse(template.render(context, request))
+#
+# def index(request):
+#     rally_list = Rally.objects.order_by('-start_date')[:5]
+#     template = loader.get_template('rallybooking/index.html')
+#     context = {
+#         'rally_list': rally_list,
+#     }
+#     return HttpResponse(template.render(context, request))
 
 def detail(request, rally_id):
     try:
